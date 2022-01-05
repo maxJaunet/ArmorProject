@@ -1,6 +1,7 @@
 /* 
   Theme name: Armor Theme
  */
+ 
 .footer {
   background-color: rgb(35, 34, 37);
   color: white;
@@ -8,4 +9,24 @@
 
 .footer li {
   color:rgb(160, 160, 160);
+}
+
+a.nav-link {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+
+.navBox {
+   background-color: white;
+   padding: 4rem;
+}
+
+@media (min-width: 530px) {
+   .nav-link {
+   margin: auto 2rem;
+ }
+}
+
+@media (max-width: 530px) {
+
 }
