@@ -6,11 +6,11 @@
     wp_enqueue_script('bootstrap', [], false, true);
   };
 
-  function myTheme_supports(){
+  function myTheme_features(){
     add_theme_support('title-tag');
   };
 
-  add_action('after_setup_theme', 'myTheme_supports');
+  add_action('after_setup_theme', 'myTheme_features');
   add_action('wp_enqueue_scripts', 'myTheme_register_assets');
 
 ?>
