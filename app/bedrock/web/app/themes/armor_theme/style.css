@@ -1,3 +1,24 @@
 /* 
   Theme name: Armor Theme
  */
+
+
+a.nav-link {
+  color: rgb(102, 102, 102);
+  text-decoration: none;
+}
+
+.navBox {
+   background-color: white;
+   padding: 4rem;
+}
+
+@media (min-width: 530px) {
+   .nav-link {
+   margin: auto 2rem;
+ }
+}
+
+@media (max-width: 530px) {
+
+}

@@ -3,6 +3,7 @@
     wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css');
     wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js', [], null, true);
     wp_enqueue_style('bootstrap');
+    wp_enqueue_style('myTheme_main_styles', get_stylesheet_uri());
     wp_enqueue_script('bootstrap', [], false, true);
   };
 
