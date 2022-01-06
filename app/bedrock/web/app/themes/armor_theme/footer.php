@@ -1,6 +1,7 @@
   
-  <footer class="footer container p-5">
-    <div class="row justify-content-between">
+  <footer class="footer container-fluid p-5">
+    <div class="container">
+      <div class="row justify-content-between">
       <div class="col-4">
         <h2>logo here</h2>
         <p class="footer-subText">
@@ -23,6 +24,8 @@
         </ul>
       </nav>
     </div>
+    </div>
+    
   </footer>
 </body>
 
