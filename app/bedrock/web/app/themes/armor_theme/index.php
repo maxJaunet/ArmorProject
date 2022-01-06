@@ -1,7 +1,7 @@
 
   <?php get_header(); ?>
 
-  <section id="section1" class="container-fluid bg-dark p-5">
+  <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
     <div class="section1-text p-5 mx-auto">
       <h1 class="p-3">Besoin d'aide ?</h1>
       <p>
@@ -31,6 +31,23 @@
         </div>
       </div>
     </div>
+  </section>
+  <section id="section2" class="container p-5 text-center">
+    <div class="section2-text p-5 mx-auto">
+      <h2 class="p-3">Qualité d'impression et compatibilités garanties</h2>
+      <p>
+        Véritable alternative aux marques d'imprimantes, les cartouches d'impression fabriquées par
+        ARMOR couvrent plus de 90% du parc d'imprimante européen. C'est l'opportunité pour nos
+        clients de retrouver l'ensemble des cartouches en version compatible à la marque de leur
+        imprimante !
+      </p>
+    </div>
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <!-- carousel here -->
+      </div>
+    </div>
+
   </section>
 
   <?php get_footer(); ?>

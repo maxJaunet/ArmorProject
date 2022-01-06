@@ -35,6 +35,10 @@ a.nav-link {
   max-width: 40%;
 }
 
+.section2-text {
+  max-width: 50%;
+}
+
 .formBox {
   background-color: white;
   border-radius: 20px;
