@@ -47,7 +47,41 @@
         <!-- carousel here -->
       </div>
     </div>
-
+  </section>
+  <section id="section3" class="container p-5 text-center">
+    <div class="section3-frame">
+      <div class="section3-text pb-5">
+        <h2 class="p-3">Vous avez des questions ?</h2>
+        <p>Nous avons regroupé ici les questions les plus fréquentes</p>
+      </div>  
+      <div class="faq-box container">
+        <?php
+          if(have_posts()) {
+            while(have_posts()) {
+              the_post();
+              ?>
+              <div class="row justify-content-between questionItem p-3 mb-4 align-middle">
+                <div class="col-8 text-start">
+                  <p class="m-0 py-2">Question text here</p>
+                </div>
+                <div class="col-3 text-end">
+                  <button class="btn btn-purple p-2 px-4">Lire</button>
+                </div>
+              </div>
+              <?php
+            }
+          }
+          else {
+            ?>
+              <p>Aucune question diponible pour le moment</p>
+            <?php
+          }
+        ?>
+      </div>
+      <button class="btn btn-purple btn-lg px-4 mt-4">
+        Accéder à l'ensemble de la F.A.Q
+      </button>
+    </div>
   </section>
 
   <?php get_footer(); ?>
