@@ -24,9 +24,11 @@
           <p class="questionTag">?</p>
         </div>
       </div>
-      <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Ex: 24486715338" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <button class="btn btn-primary btn-purple" type="button" id="button-addon2">Rechercher</button>
+      <div class="input-group mb-3 searchField">
+        <input type="text" class="form-control textField" placeholder="Ex: 24486715338" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div>
+          <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
+        </div>
       </div>
     </div>
   </section>
