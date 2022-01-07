@@ -1,9 +1,10 @@
 
   <?php get_header(); ?>
 
-  <!-- <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
+  <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
     <div class="section1-text p-5 mx-auto">
       <h1 class="p-3">Besoin d'aide ?</h1>
+      
       <p>
         Sur ce site vous trouverez des instructions et des réponses à vos questions
         sur les cartouches et toners.
@@ -44,7 +45,7 @@
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-       carousel here -->
+        <!-- carousel here -->
       </div>
     </div>
   </section>
@@ -81,41 +82,6 @@
       <button class="btn btn-purple btn-lg px-4 mt-4">
         Accéder à l'ensemble de la F.A.Q
       </button>
-    </div>
-  </section>
-  <section id="section4" class="container p-4">
-    <div class="section4-text p-5 mx-auto text-center">
-      <h1 class="p-3">Avec Armor Print Solutions, la qualité sans compromis</h1>
-    </div>
-    <div class="row justify-content-center gx-5 px-4">
-      <div class="col-3">
-        <div class="cardBox p-4">
-          <i class="logo">logo</i>
-          <h4>Card title</h4>
-          <p>card content</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="cardBox p-4">
-          <i class="logo">logo</i>
-          <h4>Card title</h4>
-          <p>card content</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="cardBox p-4">
-          <i class="logo">logo</i>
-          <h4>Card title</h4>
-          <p>card content</p>
-        </div>
-      </div>
-      <div class="col-3">
-        <div class="cardBox p-4">
-          <i class="logo">logo</i>
-          <h4>Card title</h4>
-          <p>card content</p>
-        </div>
-      </div>
     </div>
   </section>
 
