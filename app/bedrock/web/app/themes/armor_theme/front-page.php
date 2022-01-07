@@ -1,9 +1,10 @@
 
   <?php get_header(); ?>
 
-  <!-- <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
+  <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
     <div class="section1-text p-5 mx-auto">
       <h1 class="p-3">Besoin d'aide ?</h1>
+      
       <p>
         Sur ce site vous trouverez des instructions et des réponses à vos questions
         sur les cartouches et toners.
@@ -82,6 +83,6 @@
         Accéder à l'ensemble de la F.A.Q
       </button>
     </div>
-  </section> -->
+  </section>
 
   <?php get_footer(); ?>

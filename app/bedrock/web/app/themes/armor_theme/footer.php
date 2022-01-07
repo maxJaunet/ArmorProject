@@ -17,11 +17,14 @@
     </div>
     <div class="row justify-content-between">
       <nav class="nav-list">
-        <ul>
+        <?php wp_nav_menu(array(
+          'theme_location' => 'footerMenuLocation'
+        )); ?>
+        <!-- <ul>
           <li><a class="nav-item" href="#">Mentions légales</a></li>
           <li><a class="nav-item" href="#">Protection des données</a></li>
           <li><a class="nav-item" href="#">Gestion des cookies</a></li>
-        </ul>
+        </ul> -->
       </nav>
     </div>
     </div>

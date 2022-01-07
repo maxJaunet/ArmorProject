@@ -1,9 +1,30 @@
 /* 
   Theme name: Armor Theme
  */
+html {
+  margin-top: 0;
+}
+
+.header {
+  background-color: transparent;
+  position: absolute;
+}
+
 a {
   text-decoration: none;
-  color: black;
+}
+
+.header {
+  /* background-color: white; */
+  position: sticky;
+  top: 0;
+}
+
+.header-menu li, .header-menu a {
+  list-style: none;
+  color: rgb(73, 72, 72);
+  display: inline;
+  margin: auto 1rem;
 }
 
 .footer {
@@ -15,13 +36,11 @@ a {
   color:rgb(160, 160, 160);
 }
 
-a.nav-link {
-  color: rgb(102, 102, 102);
-  text-decoration: none;
+.menu {
+  color: rgb(150, 150, 150);
 }
 
 .navBox {
-   background-color: white;
    padding: 4rem;
 }
 
@@ -29,6 +48,7 @@ a.nav-link {
   background-image: url('./UI_Armor/main_bg.jpg');
   text-align: center;
   color: white;
+  margin: 0;
 }
 
 .section1-text {
