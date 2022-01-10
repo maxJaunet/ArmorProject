@@ -28,7 +28,6 @@
 // 	}
 // 	return $items;
 // }
-
   add_action('after_setup_theme', 'myTheme_features');
   add_action('wp_enqueue_scripts', 'myTheme_register_assets');
 

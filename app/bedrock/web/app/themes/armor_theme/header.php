@@ -8,11 +8,13 @@
   <?php wp_head(); ?>
 </head>
 <body>
+  
   <header class="header">
     <nav class="navbar navBox navbar-expand-lg">
       <div class="container justify-content-between">
-        <a class="navbar-brand" href="<?php echo site_url() ;?>">
-          <img src="<?php get_field('header_logo') ;?>" alt="logo">
+        <a class="navbar-brand" href="<?php echo home_url() ;?>">
+        <!-- image non chargée -->
+          <img src="<?php the_field('header_logo') ;?>" alt="logo">
         </a>
         <div>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
