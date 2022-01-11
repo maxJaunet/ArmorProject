@@ -8,21 +8,6 @@
     wp_enqueue_script('bootstrap', [], false, true);
   };
 
-$menuHeader = get_terms('headerMenusLocation');
-function my_wp_nav_menu_items_logo($items, $menuHeader) {
-	$menu = wp_get_nav_menu_object( $menuHeader->menu);
-	if( $menuHeader->theme_location == 'headerMenusLocation') {
-		$logo = get_field('header_logo', $menu);
-		$color = get_field('header_logo_color', $menu);
-    echo $color . $logo;
-		$html_logo = '<a class="navigation-top" href="'.home_url().'"><img src="'.$logo.'" alt="logo"/></a>';
-		$html_color = '<style type="text/css">.navigation-top{ background: '.$color.';}</style>';
-		$items = $html_logo . $items . $html_color;	
-	}
-	return $items;
-}
-add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items_logo', 10, 2);
-
 function myTheme_features(){
   add_theme_support('title-tag');
   register_nav_menu('headerMenusLocation', 'Header menu location');
@@ -36,11 +21,8 @@ function load_scripts() {
   wp_enqueue_script('autocomplete_js_file', get_theme_file_uri('autocomplete.js'), ['jquery', 'jquery-ui-autocomplete'], '1.0', true); 
 };
 
-
 add_action('after_setup_theme', 'myTheme_features');
 add_action('wp_enqueue_scripts', 'myTheme_register_assets');
 add_action('wp_enqueue_scripts', 'load_scripts');
-
-
 
 ?>

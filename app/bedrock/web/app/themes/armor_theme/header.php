@@ -15,7 +15,7 @@
         
         <a class="navbar-brand" href="<?php echo home_url() ;?>">
         <!-- image non chargée -->
-          <img id="headerLogo" src="<?php get_template_directory_uri(). '/assets/Logo_Wecare.png'?>" alt="logo">
+          <img id="headerLogo" src="<?php get_template_directory_uri().'/assets/Logo_Wecare.png'?>" alt="logo">
         </a>
       <div class="menuBox">
         <?php wp_nav_menu(array(
