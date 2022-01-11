@@ -42,7 +42,7 @@ a {
 }
 
 #section1 {
-  background-image: url('./UI_Armor/main_bg.jpg');
+  /* background-image: url('./UI_Armor/main_bg.jpg'); */
   text-align: center;
   color: white;
   margin: 0;

@@ -1,8 +1,6 @@
 
   <?php get_header(); ?>
-  <?php
-    while(have_posts()) : the_post();
-  ?>
+  
   <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
     <div class="section1-text p-sm-5 py-5 mx-auto">
       <h1 class="p-3">Besoin d'aide ?</h1>
@@ -85,5 +83,5 @@
       </button>
     </div>
   </section>
-  <?php endwhile ;?>
+
   <?php get_footer(); ?>
