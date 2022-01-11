@@ -12,9 +12,10 @@
   <header class="header">
     <nav class="navbar navBox navbar-expand-lg">
       <div class="container justify-content-between px-0 px-sm-5">
+        
         <a class="navbar-brand" href="<?php echo home_url() ;?>">
         <!-- image non chargée -->
-          <img id="headerLogo" src="<?php the_field('header_logo') ;?>" alt="logo">
+          <img id="headerLogo" src="<?php get_template_directory_uri(). '/assets/Logo_Wecare.png'?>" alt="logo">
         </a>
       <div class="menuBox">
         <?php wp_nav_menu(array(

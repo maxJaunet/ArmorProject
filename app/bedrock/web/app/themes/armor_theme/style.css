@@ -48,6 +48,10 @@ a {
   margin: 0;
 }
 
+.header-logo {
+  width: 50px;
+}
+
 .section1-text {
   max-width: 40%;
 }
