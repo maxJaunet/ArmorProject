@@ -44,7 +44,7 @@
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <!-- carousel here -->
+       carousel here -->
       </div>
     </div>
   </section>
@@ -82,6 +82,41 @@
         Accéder à l'ensemble de la F.A.Q
       </button>
     </div>
-  </section> -->
+  </section>
+  <section id="section4" class="container p-4">
+    <div class="section4-text p-5 mx-auto text-center">
+      <h1 class="p-3">Avec Armor Print Solutions, la qualité sans compromis</h1>
+    </div>
+    <div class="row justify-content-center gx-5 px-4">
+      <div class="col-3">
+        <div class="cardBox p-4">
+          <i class="logo">logo</i>
+          <h4>Card title</h4>
+          <p>card content</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="cardBox p-4">
+          <i class="logo">logo</i>
+          <h4>Card title</h4>
+          <p>card content</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="cardBox p-4">
+          <i class="logo">logo</i>
+          <h4>Card title</h4>
+          <p>card content</p>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="cardBox p-4">
+          <i class="logo">logo</i>
+          <h4>Card title</h4>
+          <p>card content</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <?php get_footer(); ?>
