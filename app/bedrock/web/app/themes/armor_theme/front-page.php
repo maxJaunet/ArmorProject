@@ -1,6 +1,8 @@
 
   <?php get_header(); ?>
-
+  <?php
+    while(have_posts()) : the_post();
+  ?>
   <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
     <div class="section1-text p-sm-5 py-5 mx-auto">
       <h1 class="p-3">Besoin d'aide ?</h1>
@@ -12,9 +14,9 @@
 
     <div class="formBox mx-auto">
       <div class="row justify-content-center fw-bold tab-links mb-3">
-          <button class="tab col-4">Code barre sur l'étiquette</button>
-          <button class="tab col-4" id="defaultOpen">Modèle de cartouches</button>
-          <button class="tab col-4">Code barre sur la boîte</button>
+          <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
+          <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
+          <button value="tabBoxBarCode" class="tab col-4">Code barre sur la boîte</button>
       </div>
       <div class="row justify-content-center">
         <div class="col-10">
@@ -24,12 +26,12 @@
           <p class="questionTag">?</p>
         </div>
       </div>
-      <div class="input-group mb-3 searchField">
-        <input type="text" class="form-control textField" placeholder="Ex: 24486715338" aria-label="Recipient's username" aria-describedby="button-addon2">
+      <form class="input-group mb-3 searchField justify-content-between" method="POST">
+        <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
         <div>
           <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
         </div>
-      </div>
+      </form>
     </div>
   </section>
   <section id="section2" class="container p-5 text-center">
@@ -83,5 +85,5 @@
       </button>
     </div>
   </section>
-
+  <?php endwhile ;?>
   <?php get_footer(); ?>

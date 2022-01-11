@@ -85,14 +85,6 @@ a {
   font-size: 0.8rem;
 }
 
-.tab:active {
-  color: rgb(148, 38, 148);
-}
-
-.tab:hover {
-  color: rgb(114, 114, 114);
-}
-
 .tab {
   font-size: inherit;
   color: inherit;
@@ -100,6 +92,11 @@ a {
 	border: none;
 	cursor: pointer;
   font-weight: bold;
+}
+
+.active {
+  color: rgb(148, 38, 148);
+  border-bottom: 2px solid rgb(148, 38, 148);
 }
 
 .questionTag {
@@ -139,6 +136,12 @@ a {
   color: white;
   border-radius: 5px;
 }
+
+.no_result {
+  color: rgb(97, 35, 35);
+}
+
+
 
 @media (min-width: 530px) {
    .nav-link {
