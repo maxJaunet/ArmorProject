@@ -7,14 +7,14 @@
   
   <section
     id="section1"
-    class="container-fluid bg-dark p-5 justify-content-center"
+    class="container-fluid p-sm-5 p-0 py-5 justify-content-center"
     style="background-image: url(<?php echo get_field('background_image', $section1->ID) ;?>);"
     >
-    <div class="section1-text p-sm-5 py-5 mx-auto">
+    <div class="section1-text p-0 p-sm-5 py-5 mx-auto">
       <?php echo $section1->post_content;?>
     </div>
 
-    <div class="formBox mx-auto">
+    <div class="formBox mx-auto p-sm-5">
       <div class="row justify-content-center fw-bold tab-links mb-3">
           <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
           <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
@@ -38,8 +38,8 @@
   </section>
 
 
-  <section id="section2" class="container p-5 text-center">
-    <div class="section2-text p-5 mx-auto">
+  <section id="section2" class="container p-sm-5 p-0 py-3 text-center">
+    <div class="section2-text px-0 p-sm-5 mx-auto">
       <?php echo $section2->post_content ;?>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
@@ -51,8 +51,8 @@
   </section>
 
 
-  <section id="section3" class="container p-5 text-center">
-    <div class="section3-frame"
+  <section id="section3" class="container p-sm-5 p-2 text-center">
+    <div class="section3-frame p-0 py-3 p-sm-5"
       style="background: url(<?php echo get_field('background_image', $section3->ID)?>) <?php echo get_field('add_color_filter', $section3->ID);?> ;">
       <div class="section3-text pb-5">
         <?php echo $section3->post_content ;?>
@@ -66,12 +66,12 @@
         $faqQuery = new WP_Query($postType_faq_args);
           while ( $faqQuery->have_posts() ) : $faqQuery->the_post();
             ?>
-            <div class="row justify-content-between questionItem p-3 mb-4 align-middle">
+            <div class="row justify-content-between questionItem p-0 p-sm-2 mb-4 align-middle">
               <div class="faq-text col-9 text-start">
-                <p class="m-0 py-2"><?php the_content();?></p>
+                <p class="m-0 py-2 py-sm-3"><?php the_content();?></p>
               </div>
-              <div class="col-3 text-end">
-                <a href="<?php echo get_theme_file_uri() . get_field('faq_url') ;?>" class="btn btn-purple p-2 px-4">Lire</a>
+              <div class="col-3 text-end py-3">
+                <a href="<?php echo get_theme_file_uri() . get_field('faq_url') ;?>" class="btn btn-purple p-sm-2 p-4 px-sm-4">Lire</a>
               </div>
             </div>
             <?php
@@ -85,9 +85,9 @@
   </section>
 
 
-  <section id="section4" class="container p-4">
-    <div class="section4-text p-5 mx-auto text-center">
-      <?php $section4->post_content ;?>
+  <section id="section4" class="container p-sm-4 p-0">
+    <div class="section4-text p-sm-5 p-0 mx-auto text-center">
+      <?php echo $section4->post_content ;?>
     </div>
     <div class="row justify-content-center gx-5 px-4">
 
@@ -101,7 +101,7 @@
         $cardQuery->set('order', 'desc');
           while ( $cardQuery->have_posts() ) : $cardQuery->the_post();
             ?>
-            <div class="col-3">
+            <div class="col-10 col-md-3 col-sm-6 mb-3">
               <div class="cardBox p-4">
                 <?php echo get_field('card_icon');?>
                 <?php the_content() ;?>
