@@ -58,12 +58,15 @@ a {
   max-width: 50%;
 }
 
+h2 {
+  padding: 2rem;
+}
+
 .section4-text {
   max-width: 50%;
 }
 
 .section3-frame {
-  background: url('./UI_Armor/bg_faq.jpg') rgb(56, 54, 66);
   border-radius: 20px;
   background-blend-mode: multiply;
   color: white;

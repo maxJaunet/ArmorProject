@@ -2,6 +2,7 @@
   <?php get_header(); ?>
   <?php $section1 = get_post(39);?>
   <?php $section2 = get_post(55);?>
+  <?php $section3 = get_post(72);?>
   
   <section
     id="section1"
@@ -36,25 +37,20 @@
   </section>
   <section id="section2" class="container p-5 text-center">
     <div class="section2-text p-5 mx-auto">
-      <h2 class="p-3">Qualité d'impression et compatibilités garanties</h2>
-      <p>
-        Véritable alternative aux marques d'imprimantes, les cartouches d'impression fabriquées par
-        ARMOR couvrent plus de 90% du parc d'imprimante européen. C'est l'opportunité pour nos
-        clients de retrouver l'ensemble des cartouches en version compatible à la marque de leur
-        imprimante !
-      </p>
+      <?php echo $section2->post_content ;?>
     </div>
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <!-- carousel here -->
+        
       </div>
     </div>
   </section>
   <section id="section3" class="container p-5 text-center">
-    <div class="section3-frame">
+    <div class="section3-frame"
+      style="background: url(<?php echo get_field('background_image', $section3->ID)?>) <?php echo get_field('add_color_filter', $section3->ID);?> ;">
       <div class="section3-text pb-5">
-        <h2 class="p-3">Vous avez des questions ?</h2>
-        <p>Nous avons regroupé ici les questions les plus fréquentes</p>
+        <?php $section3->post_content ;?>
       </div>  
       <div class="faq-box container">
         <?php
