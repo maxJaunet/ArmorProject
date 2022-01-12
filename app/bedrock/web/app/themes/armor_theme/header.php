@@ -11,19 +11,17 @@
   
   <header class="header">
     <nav class="navbar navBox navbar-expand-lg">
-      <div class="container justify-content-between px-0 px-sm-5">
-        
-        <a class="navbar-brand" href="<?php echo home_url() ;?>">
-        <!-- image non chargée -->
-          <img id="headerLogo" src="<?php get_template_directory_uri().'/assets/Logo_Wecare.png'?>" alt="logo">
-        </a>
-      <div class="menuBox">
+      <div class="container px-0 px-sm-5">
         <?php wp_nav_menu(array(
-          'theme_location' => 'headerMenuLocation',
-          'menu_class' => 'header-menu navbar-nav',
+          'menu_class' => 'header-menu navbar-nav row justify-content-between ',
           'container' => 'div',
-          'container_class' => 'menuItems'
+          'container_id' => '',
+          'menu_id' => '',
+          'container_class' => 'container px-0 px-sm-5 px-0 px-sm-5 menuItems'
         )); ?>
+        
+      <div class="menuBox">
+ 
         </div>
       </div>
       </div>
