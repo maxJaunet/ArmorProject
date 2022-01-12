@@ -22,6 +22,7 @@ a {
   color: rgb(73, 72, 72);
   display: inline;
   margin: auto 1rem;
+  max-width: 50%;
 }
 
 .footer {
@@ -42,10 +43,11 @@ a {
 }
 
 #section1 {
-  background-image: url('./UI_Armor/main_bg.jpg');
+  /* background-image: url('./UI_Armor/main_bg.jpg'); */
   text-align: center;
   color: white;
   margin: 0;
+  padding-top: 5rem;
 }
 
 .section1-text {

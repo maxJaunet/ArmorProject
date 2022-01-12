@@ -1,15 +1,15 @@
 
   <?php get_header(); ?>
-  <?php
-    while(have_posts()) : the_post();
-  ?>
-  <section id="section1" class="container-fluid bg-dark p-5 justify-content-center">
+  <?php $section1 = get_post(39);?>
+  <?php $section2 = get_post(55);?>
+  
+  <section
+    id="section1"
+    class="container-fluid bg-dark p-5 justify-content-center"
+    style="background-image: url(<?php echo get_field('background_image', $section1->ID) ;?>);"
+    >
     <div class="section1-text p-sm-5 py-5 mx-auto">
-      <h1 class="p-3">Besoin d'aide ?</h1>
-      <p>
-        Sur ce site vous trouverez des instructions et des réponses à vos questions
-        sur les cartouches et toners.
-      </p>
+      <?php echo $section1->post_content;?>
     </div>
 
     <div class="formBox mx-auto">
@@ -85,5 +85,4 @@
       </button>
     </div>
   </section>
-  <?php endwhile ;?>
   <?php get_footer(); ?>
