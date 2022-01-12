@@ -3,6 +3,7 @@
   <?php $section1 = get_post(39);?>
   <?php $section2 = get_post(55);?>
   <?php $section3 = get_post(72);?>
+  <?php $section4 = get_post(82);?>
   
   <section
     id="section1"
@@ -35,6 +36,8 @@
       </form>
     </div>
   </section>
+
+
   <section id="section2" class="container p-5 text-center">
     <div class="section2-text p-5 mx-auto">
       <?php echo $section2->post_content ;?>
@@ -46,39 +49,68 @@
       </div>
     </div>
   </section>
+
+
   <section id="section3" class="container p-5 text-center">
     <div class="section3-frame"
       style="background: url(<?php echo get_field('background_image', $section3->ID)?>) <?php echo get_field('add_color_filter', $section3->ID);?> ;">
       <div class="section3-text pb-5">
-        <?php $section3->post_content ;?>
+        <?php echo $section3->post_content ;?>
       </div>  
       <div class="faq-box container">
-        <?php
-          if(have_posts()) {
-            while(have_posts()) {
-              the_post();
-              ?>
-              <div class="row justify-content-between questionItem p-3 mb-4 align-middle">
-                <div class="col-8 text-start">
-                  <p class="m-0 py-2">Question text here</p>
-                </div>
-                <div class="col-3 text-end">
-                  <button class="btn btn-purple p-2 px-4">Lire</button>
-                </div>
-              </div>
-              <?php
-            }
-          }
-          else {
+      <?php
+        $postType_faq_args = array(
+          'post_type' => 'faq_post_type',
+          'posts_per_page' => 5,
+        );
+        $faqQuery = new WP_Query($postType_faq_args);
+          while ( $faqQuery->have_posts() ) : $faqQuery->the_post();
             ?>
-              <p>Aucune question diponible pour le moment</p>
+            <div class="row justify-content-between questionItem p-3 mb-4 align-middle">
+              <div class="faq-text col-9 text-start">
+                <p class="m-0 py-2"><?php the_content();?></p>
+              </div>
+              <div class="col-3 text-end">
+                <a href="<?php echo get_theme_file_uri() . get_field('faq_url') ;?>" class="btn btn-purple p-2 px-4">Lire</a>
+              </div>
+            </div>
             <?php
-          }
+          endwhile;
         ?>
       </div>
-      <button class="btn btn-purple btn-lg px-4 mt-4">
+      <a href="/archive"><button class="btn btn-purple btn-lg px-4 mt-4">
         Accéder à l'ensemble de la F.A.Q
-      </button>
+      </button></a>
+    </div>
+  </section>
+
+
+  <section id="section4" class="container p-4">
+    <div class="section4-text p-5 mx-auto text-center">
+      <?php $section4->post_content ;?>
+    </div>
+    <div class="row justify-content-center gx-5 px-4">
+
+      <?php
+        $postType_cards_args = array(
+          'post_type' => 'section4_post_type',
+          'posts_per_page' => 4,
+        );
+        $cardQuery = new WP_Query($postType_cards_args);
+        $cardQuery->set('order_by', 'date');
+        $cardQuery->set('order', 'desc');
+          while ( $cardQuery->have_posts() ) : $cardQuery->the_post();
+            ?>
+            <div class="col-3">
+              <div class="cardBox p-4">
+                <?php echo get_field('card_icon');?>
+                <?php the_content() ;?>
+              </div>
+            </div>
+            <?php
+          endwhile;
+        ?>
+
     </div>
   </section>
   <?php get_footer(); ?>
