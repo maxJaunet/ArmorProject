@@ -21,17 +21,19 @@ function load_scripts() {
   wp_enqueue_script('autocomplete_js_file', get_theme_file_uri('autocomplete.js'), ['jquery', 'jquery-ui-autocomplete'], '1.0', true); 
 };
 
+
+// load header logo in nav menu
 function my_wp_nav_menu_items( $items, $args ) {
   $menu = wp_get_nav_menu_object($args->menu);
   if($menu->name === 'Header Menu') {
     $logo = get_field('header_logo', $menu);
-    $color = get_field('logo_basic_color', $menu);
     $html_logo = '<a href="'.home_url().'"><img id="header_logo" src="'.$logo.'" alt="logo" /></a>';
     $items = '<div class="row justify-content-between"><div class="col-4">'.$html_logo .'</div><div class="col-6">'.$items.'</div>' ;	
   };
 	return $items;
 }
 
+// create FAQ post type
 function faq_post_type() {
 	    $labels = array(
         'name' => 'faq section 3',
@@ -41,7 +43,6 @@ function faq_post_type() {
         'edit_item' => 'Modifier le FAQ',
         'menu_name' => 'faq section 3'
     );
-
 	$args = array(
         'labels' => $labels,
         'public' => true,
@@ -52,11 +53,10 @@ function faq_post_type() {
         'menu_icon' => 'dashicons-admin-customizer',
         'hierarchical' => true,
 	);
-
 	register_post_type( 'faq_post_type', $args );
 }
-add_action( 'init', 'faq_post_type' );
 
+// create Card post type
 function section4_post_type() {
 	    $labels = array(
         'name' => 'Cards',
@@ -66,7 +66,6 @@ function section4_post_type() {
         'edit_item' => 'Modifier',
         'menu_name' => 'Cards'
     );
-
 	$args = array(
         'labels' => $labels,
         'public' => true,
@@ -77,10 +76,11 @@ function section4_post_type() {
         'menu_icon' => 'dashicons-images-alt2',
         'hierarchical' => true,
 	);
-
 	register_post_type( 'section4_post_type', $args );
-}
+};
+
 add_action( 'init', 'section4_post_type' );
+add_action( 'init', 'faq_post_type' );
 
 add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);
 
