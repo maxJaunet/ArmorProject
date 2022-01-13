@@ -13,7 +13,6 @@
     <div class="section1-text p-0 p-sm-5 py-5 mx-auto">
       <?php echo $section1->post_content;?>
     </div>
-
     <div class="formBox mx-auto p-sm-5 p-3">
       <div class="row justify-content-center fw-bold tab-links mb-3">
           <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>

@@ -9,21 +9,17 @@
 </head>
 <body id="body">
   
-  <header class="header">
+  <header class="header py-5">
     <nav class="navbar navBox navbar-expand-lg">
-      <div class="container px-0 px-sm-5">
+      <div class="container px-0 mx-0 mx-sm-auto px-sm-5">
         <?php wp_nav_menu(array(
           'menu_class' => 'header-menu navbar-nav row justify-content-between ',
           'container' => 'div',
           'container_id' => '',
           'menu_id' => '',
-          'container_class' => 'container px-0 px-sm-5 px-0 px-sm-5 menuItems'
+          'container_class' => 'px-0 px-sm-5 px-0 px-sm-5'
         )); ?>
         
-      <div class="menuBox">
- 
-        </div>
-      </div>
       </div>
     </nav>
   </header>

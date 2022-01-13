@@ -19,6 +19,7 @@ function load_scripts() {
   wp_enqueue_script('jQuery-js', 'http://code.jquery.com/jquery.js', array(), '1.0', true);
   wp_enqueue_script('autocomplete_script', 'https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js', null, '1.0', true);
   wp_enqueue_script('autocomplete_js_file', get_theme_file_uri('autocomplete.js'), ['jquery', 'jquery-ui-autocomplete'], '1.0', true); 
+  wp_enqueue_script('navbar_toggler_js_file', get_theme_file_uri('navbar_toggler.js'), ['jquery'], '1.0', true); 
 };
 
 
@@ -28,7 +29,19 @@ function my_wp_nav_menu_items( $items, $args ) {
   if($menu->name === 'Header Menu') {
     $logo = get_field('header_logo', $menu);
     $html_logo = '<a href="'.home_url().'"><img id="header_logo" src="'.$logo.'" alt="logo" /></a>';
-    $items = '<div class="row justify-content-between"><div class="col-4">'.$html_logo .'</div><div class="col-6">'.$items.'</div>' ;	
+    $items = 
+      '<div class="row justify-content-between navbar-nav">
+        <div class="col-sm-4 col-4 navbar-brand">'.$html_logo .'</div>
+        <button id="nav-toggler" class="navbar-toggler px-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"><hr/><hr/><hr/></span>
+        </button>
+        <div class="col-6">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          '.$items.'
+          </div>
+        </div>
+        
+      </div>';	
   };
 	return $items;
 }
