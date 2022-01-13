@@ -13,8 +13,7 @@
     <div class="section1-text p-0 p-sm-5 py-5 mx-auto">
       <?php echo $section1->post_content;?>
     </div>
-
-    <div class="formBox mx-auto p-sm-5">
+    <div class="formBox mx-auto p-sm-5 p-3">
       <div class="row justify-content-center fw-bold tab-links mb-3">
           <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
           <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
@@ -30,7 +29,7 @@
       </div>
       <form class="input-group mb-3 searchField justify-content-between" method="POST">
         <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div>
+        <div class="mx-auto mx-sm-0">
           <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
         </div>
       </form>
