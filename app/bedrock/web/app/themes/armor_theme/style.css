@@ -22,12 +22,17 @@ a {
   text-decoration: none;
 }
 
-.header-menu li, .header-menu a {
+.header-menu li,
+ .header-menu a,
+  footer li,
+   footer a {
   list-style: none;
   color: rgb(73, 72, 72);
   display: inline;
   margin: 0 1rem;
 }
+
+
 
 .header-menu a:hover {
   color: rgb(148, 38, 148);
@@ -40,7 +45,9 @@ a {
 .footer li {
   color:rgb(160, 160, 160);
 }
-
+.menu-item a {
+  color: white;
+}
 .menu {
   color: rgb(150, 150, 150);
 }

@@ -13,6 +13,7 @@
     <nav class="navbar navBox navbar-expand-lg">
       <div class="container px-0 mx-0 mx-sm-auto px-sm-5">
         <?php wp_nav_menu(array(
+          'theme_location' => 'headerMenuLocation',
           'menu_class' => 'header-menu navbar-nav row justify-content-between ',
           'container' => 'div',
           'container_id' => '',

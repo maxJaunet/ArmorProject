@@ -24,7 +24,7 @@ function load_scripts() {
 
 
 // load header logo in nav menu
-function my_wp_nav_menu_items( $items, $args ) {
+function my_wp_header_nav_menu_items( $items, $args ) {
   $menu = wp_get_nav_menu_object($args->menu);
   if($menu->name === 'Header Menu') {
     $logo = get_field('header_logo', $menu);
@@ -40,6 +40,29 @@ function my_wp_nav_menu_items( $items, $args ) {
           '.$items.'
           </div>
         </div>
+      </div>';	
+  };
+	return $items;
+}
+// load header logo in nav menu
+function my_wp_footer_nav_menu_items( $items, $args ) {
+  $menu = wp_get_nav_menu_object($args->menu);
+  if($menu->name === 'Footer Menu') {
+    $logoLeft = get_field('image_footer_left', $menu);
+    $textLeft = get_field('footer_text_left', $menu);
+    $logoRight = get_field('image_footer_right', $menu);
+    $textRight = get_field('footer_text_right', $menu);
+    $html_logo_left = '<img id="footer_logo_left" src="'.$logoLeft.'" alt="" />';
+    $html_text_left = '<p>'.$textLeft.'</p>';
+    $html_logo_right = '<img id="footer_logo_right" src="'.$logoRight.'" alt="" />';
+    $html_text_right = '<p>'.$textRight.'</p>';
+    $items = 
+      '<div class="row justify-content-between">
+        <div class="col-12 col-md-4"><div class="mb-4">'. $html_logo_left . '</div><div>'.$html_text_left.'</div></div>
+        <div class="col-12 col-md-4"><div class="mb-5" style="height: 30px;">'. $html_logo_right.'</div><div>'.$html_text_right.'</div></div>
+      </div>
+      <div class="d-inline p-y text-start justify-content-start">
+        '.$items.'
       </div>';	
   };
 	return $items;
@@ -94,7 +117,8 @@ function section4_post_type() {
 add_action( 'init', 'section4_post_type' );
 add_action( 'init', 'faq_post_type' );
 
-add_filter('wp_nav_menu_items', 'my_wp_nav_menu_items', 10, 2);
+add_filter('wp_nav_menu_items', 'my_wp_header_nav_menu_items', 10, 2);
+add_filter('wp_nav_menu_items', 'my_wp_footer_nav_menu_items', 10, 2);
 
 add_action('after_setup_theme', 'myTheme_features');
 add_action('wp_enqueue_scripts', 'myTheme_register_assets');
