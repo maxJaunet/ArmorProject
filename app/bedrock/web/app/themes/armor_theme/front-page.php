@@ -100,7 +100,7 @@
         $cardQuery->set('order', 'desc');
           while ( $cardQuery->have_posts() ) : $cardQuery->the_post();
             ?>
-            <div class="col-10 col-md-6 col-lg-4 mb-3">
+            <div class="col-10 col-md-6 col-lg-3 mb-3">
               <div class="cardBox p-4">
                 <?php echo get_field('card_icon');?>
                 <?php the_content() ;?>

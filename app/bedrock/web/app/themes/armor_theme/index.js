@@ -13,4 +13,3 @@ window.onscroll = () => {
     logo.classList.remove('imageFilterOnScroll');
   }
 }
-
