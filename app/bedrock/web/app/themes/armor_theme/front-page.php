@@ -41,11 +41,38 @@
     <div class="section2-text px-0 p-sm-5 mx-auto my-sm-5">
       <?php echo $section2->post_content ;?>
     </div>
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
       <div class="carousel-inner">
-        <!-- carousel here -->
-        
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="../armor_theme/UI_Armor/epson.png" alt="First slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/dell.png" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/hp.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/konika.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/Lexmark.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/Logo_Brother.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/logo_Canon.png" alt="Third slide">
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100" src="./UI_Armor/ricoh.png" alt="Third slide">
+        </div>
       </div>
+    </div>
+      <a href="/brands"><button class="btn btn-purple btn-lg px-4 mt-4 mb-2">
+        Accéder à l'ensemble de la F.A.Q
+      </button></a>
+    </div>
     </div>
   </section>
 

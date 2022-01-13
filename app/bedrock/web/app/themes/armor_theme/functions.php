@@ -19,6 +19,7 @@ function load_scripts() {
   wp_enqueue_script('jQuery-js', 'http://code.jquery.com/jquery.js', array(), '1.0', true);
   wp_enqueue_script('autocomplete_script', 'https://cdn.jsdelivr.net/npm/@tarekraafat/autocomplete.js@10.2.6/dist/autoComplete.min.js', null, '1.0', true);
   wp_enqueue_script('autocomplete_js_file', get_theme_file_uri('autocomplete.js'), ['jquery', 'jquery-ui-autocomplete'], '1.0', true); 
+  wp_enqueue_script('carousel_js_file', get_theme_file_uri('carousel.js'), ['jquery'], '1.0', true); 
   wp_enqueue_script('navbar_toggler_js_file', get_theme_file_uri('navbar_toggler.js'), ['jquery'], '1.0', true); 
 };
 
@@ -44,7 +45,7 @@ function my_wp_header_nav_menu_items( $items, $args ) {
   };
 	return $items;
 }
-// load header logo in nav menu
+// load footer logo in nav menu
 function my_wp_footer_nav_menu_items( $items, $args ) {
   $menu = wp_get_nav_menu_object($args->menu);
   if($menu->name === 'Footer Menu') {
