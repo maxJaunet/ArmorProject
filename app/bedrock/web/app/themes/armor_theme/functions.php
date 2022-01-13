@@ -40,7 +40,6 @@ function my_wp_nav_menu_items( $items, $args ) {
           '.$items.'
           </div>
         </div>
-        
       </div>';	
   };
 	return $items;

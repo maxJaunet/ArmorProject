@@ -48,7 +48,8 @@ a {
 #section1 {
   text-align: center;
   color: white;
-  margin: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .section1-text {
@@ -167,7 +168,6 @@ h2 {
 }
 
 .imageFilterOnScroll {
-  /* filter: invert(19%) sepia(31%) saturate(6175%) hue-rotate(284deg) brightness(95%) contrast(90%); */
   filter: invert(12%) sepia(33%) saturate(4017%) hue-rotate(277deg) brightness(58%) contrast(100%);
 }
 
@@ -195,19 +195,23 @@ h2 {
   text-align: end;
 }
 
-@media (min-width: 530px) {
+@media (min-width: 800px) {
    .nav-link {
       margin: auto 2rem;
  }
 }
 
-@media (max-width: 530px) {
+@media (max-width: 800px) {
   .section1-text {
-    max-width: 80%;
+    width: 100%;
+  }
+  .formBox {
+    width: 100%;
   }
   .section2-text {
-    max-width: 100%;
+    width: 100%;
   }
+  
   .menuItems {
     padding-left: 0;
   }
