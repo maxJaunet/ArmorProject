@@ -10,7 +10,7 @@
     class="container-fluid p-sm-5 p-0 justify-content-center"
     style="background-image: url(<?php echo get_field('background_image', $section1->ID) ;?>);"
     >
-    <div class="section1-text p-3 mt-5 mb-2 mx-auto">
+    <div class="section-text p-3 mt-5 mb-2 mx-auto">
       <?php echo $section1->post_content;?>
     </div>
     <div class="formBox mx-auto p-sm-5 p-3 mb-5">
@@ -38,7 +38,7 @@
 
 
   <section id="section2" class="text-center">
-    <div class="section2-text px-0 p-sm-5 mx-auto my-sm-5">
+    <div class="section-text px-0 p-sm-5 mx-auto my-sm-5">
       <?php echo $section2->post_content ;?>
     </div>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
@@ -112,7 +112,7 @@
 
 
   <section id="section4" class="container p-sm-4 p-0">
-    <div class="section4-text p-sm-5 p-0 mx-auto text-center">
+    <div class="section-text p-sm-5 p-0 mx-auto text-center">
       <?php echo $section4->post_content ;?>
     </div>
     <div class="row justify-content-center gx-5 px-4">

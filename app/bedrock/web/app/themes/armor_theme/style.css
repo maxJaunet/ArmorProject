@@ -9,6 +9,10 @@ html {
   font-size: 0.8rem;
 }
 
+a {
+  text-decoration: none;
+}
+
 .header {
   background-color: transparent;
   position: absolute;
@@ -16,10 +20,6 @@ html {
   width: 100%;
   max-height: 30%;
   z-index: 5;
-}
-
-a {
-  text-decoration: none;
 }
 
 .header-menu li,
@@ -32,25 +32,22 @@ a {
   margin: 0 1rem;
 }
 
+.menu-item a {
+  color: white;
+}
 
+.header-menu a {
+  color: rgb(150, 150, 150);
+}
 
 .header-menu a:hover {
   color: rgb(148, 38, 148);
 }
-.footer {
-  background-color: rgb(35, 34, 37);
-  color: white;
-}
 
-.footer li {
-  color:rgb(160, 160, 160);
-}
-.menu-item a {
-  color: white;
-}
 .menu-item a:hover {
   color: rgb(148, 38, 148);
 }
+
 .menu {
   color: rgb(150, 150, 150);
 }
@@ -62,20 +59,12 @@ a {
   background-size: cover;
 }
 
-.section1-text {
-  width: 50%;
-}
-
-.section2-text {
+.section-text {
   width: 50%;
 }
 
 h2 {
   padding: 2rem;
-}
-
-.section4-text {
-  max-width: 50%;
 }
 
 .dashicons {
@@ -209,6 +198,15 @@ h2 {
   text-align: end;
 }
 
+.footer {
+  background-color: rgb(35, 34, 37);
+}
+
+.footer li {
+  color:rgb(160, 160, 160);
+}
+
+
 @media (min-width: 800px) {
    .nav-link {
       margin: auto 2rem;
@@ -216,20 +214,15 @@ h2 {
 }
 
 @media (max-width: 800px) {
-  .section1-text {
-    width: 100%;
-  }
   .formBox {
     width: 100%;
   }
-  .section2-text {
+
+  .section-text {
     width: 100%;
   }
-  
+
   .menuItems {
     padding-left: 0;
-  }
-  .section4-text {
-    max-width: 100%;
   }
 }
