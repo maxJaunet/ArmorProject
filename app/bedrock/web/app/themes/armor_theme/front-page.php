@@ -38,7 +38,7 @@
 
 
   <section id="section2" class="text-center">
-    <div class="section-text px-0 p-sm-5 mx-auto my-sm-5">
+    <div class="section-text px-0 p-md-5 mx-auto my-md-5">
       <?php echo $section2->post_content ;?>
     </div>
     <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
