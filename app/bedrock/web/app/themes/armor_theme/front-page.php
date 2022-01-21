@@ -7,34 +7,36 @@
   
   <section
     id="section1"
-    class="container-fluid p-sm-5 p-0 justify-content-center"
+    class="container-fluid"
     style="background-image: url(<?php echo get_field('background_image', $section1->ID) ;?>);"
     >
-    <div class="section-text p-3 mt-5 mb-2 mx-auto">
-      <?php echo $section1->post_content;?>
-    </div>
-    <div class="formBox mx-auto p-md-5 p-4 mb-5">
-      <div class="row justify-content-center fw-bold tab-links mb-3">
-          <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
-          <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
-          <button value="tabBoxBarCode" class="tab col-4">Code barre sur la boîte</button>
+    <div class="sec1-group">
+      <div class="section-text p-3 mb-3 mx-auto">
+        <?php echo $section1->post_content;?>
       </div>
-      <div class="row justify-content-center py-2">
-        <div class="col-10 mx-0">
-          <p>Entrez le numéro complet présent sous le code barre de l'étiquette cartouche</p>
+      <div class="formBox mx-auto p-md-5 p-4 mb-5">
+        <div class="row fw-bold tab-links mb-3">
+            <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
+            <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
+            <button value="tabBoxBarCode" class="tab col-4">Code barre sur la boîte</button>
         </div>
-        <div class="col-2">
-          <p class="questionTag">?</p>
+        <div class="row py-2">
+          <div class="col-10 mx-0">
+            <p>Entrez le numéro complet présent sous le code barre de l'étiquette cartouche</p>
+          </div>
+          <div class="col-2">
+            <p class="questionTag">?</p>
+          </div>
         </div>
+        <form class="row input-group mb-auto mb-md-3 mx-auto searchField justify-content-between" method="POST">
+          <div class="col-10 mx-0 px-0">
+            <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
+          </div>
+          <div class="col-2 text-end text px-0">
+            <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
+          </div>
+        </form>
       </div>
-      <form class="row input-group mb-auto mb-md-3 mx-auto searchField justify-content-between" method="POST">
-        <div class="col-10 mx-0 px-0">
-          <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
-        </div>
-        <div class="col-2 text-end text px-0">
-          <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
-        </div>
-      </form>
     </div>
   </section>
 

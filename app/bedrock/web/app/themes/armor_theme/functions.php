@@ -58,11 +58,11 @@ function my_wp_footer_nav_menu_items( $items, $args ) {
     $html_logo_right = '<img id="footer_logo_right" src="'.$logoRight.'" alt="" />';
     $html_text_right = '<p>'.$textRight.'</p>';
     $items = 
-      '<div class="row justify-content-between">
+      '<div class="row justify-content-between gy-5 mb-3">
         <div class="col-12 col-md-4"><div class="mb-4">'. $html_logo_left . '</div><div>'.$html_text_left.'</div></div>
         <div class="col-12 col-md-4"><div class="mb-5" style="height: 30px;">'. $html_logo_right.'</div><div>'.$html_text_right.'</div></div>
       </div>
-      <div class="d-inline p-y text-start justify-content-start">
+      <div class="p-y text-start justify-content-start">
         '.$items.'
       </div>';	
   };

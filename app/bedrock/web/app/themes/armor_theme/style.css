@@ -57,6 +57,12 @@ a {
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 55rem;
+}
+
+.sec1-group {
+  position: relative;
+  top: 12rem;
 }
 
 .section-text {
