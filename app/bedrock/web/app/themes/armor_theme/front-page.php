@@ -13,23 +13,25 @@
     <div class="section-text p-3 mt-5 mb-2 mx-auto">
       <?php echo $section1->post_content;?>
     </div>
-    <div class="formBox mx-auto p-sm-5 p-3 mb-5">
+    <div class="formBox mx-auto p-md-5 p-4 mb-5">
       <div class="row justify-content-center fw-bold tab-links mb-3">
           <button value="tabStickerBarCode" class="tab col-4">Code barre sur l'étiquette</button>
           <button value="tabCartridgeType" class="tab col-4 active" id="defaultOpen">Modèle de cartouches</button>
           <button value="tabBoxBarCode" class="tab col-4">Code barre sur la boîte</button>
       </div>
       <div class="row justify-content-center py-2">
-        <div class="col-10">
+        <div class="col-10 mx-0">
           <p>Entrez le numéro complet présent sous le code barre de l'étiquette cartouche</p>
         </div>
         <div class="col-2">
           <p class="questionTag">?</p>
         </div>
       </div>
-      <form class="input-group mb-auto mb-md-3 searchField justify-content-between" method="POST">
-        <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
-        <div class="mx-auto mx-sm-0">
+      <form class="row input-group mb-auto mb-md-3 mx-auto searchField justify-content-between" method="POST">
+        <div class="col-10 mx-0 px-0">
+          <input id="autoComplete" type="text" class="form-control textField" aria-label="Recipient's username" aria-describedby="button-addon2">
+        </div>
+        <div class="col-2 text-end text px-0">
           <button class="btn btn-primary btn-purple" type="button">Rechercher</button>
         </div>
       </form>
@@ -37,7 +39,7 @@
   </section>
 
 
-  <section id="section2" class="text-center">
+  <section id="section2" class="text-center p-5">
     <div class="section-text px-0 p-md-5 mx-auto my-md-5">
       <?php echo $section2->post_content ;?>
     </div>
